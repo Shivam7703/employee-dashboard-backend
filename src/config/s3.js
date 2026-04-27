@@ -67,7 +67,7 @@ const upload = multer({
 const getSignedUrl = async (key, expiresIn = 3600) => {
   if (!useS3) {
     // Return local URL if using local storage
-    return `${process.env.BASE_URL || 'http://localhost:5000'}/uploads/${key.split('/').pop()}`;
+    return `${process.env.BASE_URL || 'https://employee-dashboard-backend-7h53.onrender.com/'}/uploads/${key.split('/').pop()}`;
   }
   
   const params = {
